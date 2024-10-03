@@ -4,6 +4,19 @@
 
 This Railway Booking System is designed to manage train schedules, routes, stations, customer bookings, and cancellations. The system includes various tables to store information about routes, stations, customers, trains, bookings, cancellations, and availability schedules. 
 
+**Key Features:**
+
+1. **Multiple Trains on the Same Route**: Many trains can run on the same route, allowing for flexibility in scheduling.
+2. **No RAC Concept**: There is no concept of Reservation Against Cancellation (RAC) in our system.
+3. **Booking and Cancellation Rules**: Tickets can be booked and canceled only if seats and waiting list thresholds allow.
+4. **Multiple Intermediate Stations**: Each train will have multiple intermediate stations, depending on the routes defined.
+5. **Fare Calculation**: The fare is set at **2.8 rupees/km**.
+6. **Seating Options**: Currently, we do not allow multiple seating options and coaches (like 3AC, 2AC, 1AC). Each train schedule will have **only 10 seats** available.
+7. **Train Number Format**: The train number will have the last three digits as the RouteID.
+8. **Distance Calculation**: The distance between two stations depends on the route and is calculated accordingly.
+9. **Mandatory Customer Registration**: Customer registration is mandatory to book a seat successfully.
+10. **Multiple Ticket Booking**: Customers can book multiple tickets using the same CustomerID and can cancel them at any time before the train's departure.
+
 ## Database Schema
 
 The following tables are included in the database schema:
