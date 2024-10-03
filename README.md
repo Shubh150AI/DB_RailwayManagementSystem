@@ -137,10 +137,10 @@ The procedures and functions can be tested using PL/SQL blocks with example inpu
 
 ![image](https://github.com/user-attachments/assets/22725d45-ffa4-4cab-bf01-9ccf795fad1a)
 
-## To check train availability  :
+## Check train availability  :
 ![image](https://github.com/user-attachments/assets/226195a6-2b8c-4691-a95d-948ec53a0abc)
 
-## To create a booking :
+## Create a booking :
 
 ![image](https://github.com/user-attachments/assets/f5a09a05-1afe-40ef-9984-2f8962cc8f9d)
 
