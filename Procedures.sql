@@ -1,6 +1,6 @@
 
 
----------------- NEW CUSTOMER  SIGNUP SP --------------------------
+------------------------------------- 1 . NEW CUSTOMER SIGNUP  -------------------------------------------
 
 
 
@@ -48,29 +48,32 @@ END AddNewCustomer;
 
 
 
--- ADDNEWCUSTOMER PROC TESTING
+------- ADDNEWCUSTOMER PROCEDURE  TESTING----------
 
 BEGIN
     AddNewCustomer(
-        p_Email => 'Shubham26@example.com',
-        p_PassKey => 'Shubham123',
-        p_FullName => 'Shubham C',
+        p_Email => 'Ayush100@example.com',
+        p_PassKey => '123456',
+        p_FullName => 'Ayush D',
         p_Age => 24,
-        p_Phone => '1234567890', -- Correct phone number length (10 characters)
-        p_PaymentAccount => '123456PNB'
+        p_Phone => '1230067890', -- Correct phone number length (10 characters)
+        p_PaymentAccount => '12345HDFC'
     );
 END;
 /
 
 
 
+SELECT * FROM CUSTOMERS;
 
 
 
 
 
 
----------- CUSTOMER LOGIN   SP------------------------
+
+
+---------- 2. CUSTOMER LOGIN   SP ------------------------
 
 
 
@@ -106,15 +109,19 @@ END;
 
 
 
+COMMIT;
 
+
+
+--  Calling the Procedure CustomerLogin
 
 
 DECLARE
-    v_customerID VARCHAR2(20); -- Declare the variable to hold the customer ID
+    v_customerID VARCHAR2(20); -- Declared the variable to hold the customer ID
 BEGIN
     -- Step 1: Call the CustomerLogin procedure
     BEGIN
-        CustomerLogin('Shubham26@example.com', 'Shubham123', v_customerID);
+        CustomerLogin('Ayush100@example.com', '123456', v_customerID);
     EXCEPTION
         WHEN OTHERS THEN
             DBMS_OUTPUT.PUT_LINE('Login failed: ' || SQLERRM);
@@ -129,7 +136,6 @@ END;
 
 
 
-DROP PROCEDURE CUSTOMERBOOKING
 
 
 
@@ -137,7 +143,7 @@ DROP PROCEDURE CUSTOMERBOOKING
 
 
 
-------------------------------------  CheckTrainAvailability SP --------------------------
+------------------------------------ 3. CheckTrainAvailability SP --------------------------
 
 CREATE OR REPLACE PROCEDURE CheckTrainAvailability (
     p_trainID IN INTEGER,
@@ -185,7 +191,7 @@ END;
 
 
 
-SET SERVEROUTPUT ON; -- Enable output for DBMS_OUTPUT
+SET SERVEROUTPUT ON;
 
 DECLARE
     v_message VARCHAR2(500); -- Variable to hold the availability message
@@ -193,9 +199,9 @@ BEGIN
     -- Call the CheckTrainAvailability procedure
     CheckTrainAvailability(
         p_trainID => 13452,
-        p_boardingStationID => 'CNB',
+        p_boardingStationID => 'BSB',
         p_endingStationID => 'NDLS',
-        p_dateOfJourney => TO_DATE('2024-10-02', 'YYYY-MM-DD'),
+        p_dateOfJourney => TO_DATE('2024-10-10', 'YYYY-MM-DD'),
         p_message => v_message
     );
 
@@ -214,12 +220,7 @@ END;
 
 
 
-
-
-
-
-
-
+---------------------------------- 4. CREATE BOOKING PROCEDURE -------------------------------
 
 
 CREATE OR REPLACE PROCEDURE CreateBooking (
@@ -242,10 +243,10 @@ CREATE OR REPLACE PROCEDURE CreateBooking (
     v_availableSeats INTEGER;
     v_seatAlloted CHAR(1);
 BEGIN
-    -- Step 1: Call the CustomerLogin procedure
+    -- Step 1: Call the CustomerLogin procedure (P)
     CustomerLogin(p_email, p_passkey, v_customerID);
 
-    -- Step 2: Check train availability
+    -- Step 2: Check train availability (P)
     CheckTrainAvailability(p_trainID, p_boardingStationID, p_endingStationID, p_dateOfJourney, v_message);
     DBMS_OUTPUT.PUT_LINE(v_message);
 
@@ -255,28 +256,37 @@ BEGIN
     WHERE TrainID = p_trainID
       AND ScheduledDate = p_dateOfJourney;
 
-    -- Step 3: Check if seats are available
-    IF v_availableSeats > 0 THEN
-        v_seatAlloted := '1'; -- Allot a seat
+
+-- Step 3: Check if seats are available
+IF v_availableSeats > 0 THEN
+    IF v_availableSeats > 5 THEN
+        v_seatAlloted := 0; -- Assign 0 when more than 5 seats are available
         v_availableSeats := v_availableSeats - 1; -- Deduct one seat from available seats
+        DBMS_OUTPUT.PUT_LINE('Seat Allotted: ' || v_seatAlloted); -- Inform about the seat allotted
 
-        -- Update the available seats in AvailabilitySchedule
-        UPDATE AvailabilitySchedule
-        SET AvailableSeats = v_availableSeats
-        WHERE TrainID = p_trainID
-          AND ScheduledDate = p_dateOfJourney;
-
-    ELSIF v_availableSeats = 0 THEN
-        v_seatAlloted := '0'; -- No seat available
-        DBMS_OUTPUT.PUT_LINE('All seats are booked. Please look for another train.');
-        RETURN; -- Exit procedure
-
-    ELSIF v_availableSeats < 0 THEN
-        DBMS_OUTPUT.PUT_LINE('Error: All seats are booked. Please look for another train.');
-        RETURN; -- Exit procedure
+    ELSIF v_availableSeats <= 5 THEN
+        v_seatAlloted := v_availableSeats; -- Assign the current number of available seats
+        v_availableSeats := v_availableSeats - 1; -- Deduct one seat from available seats
+        DBMS_OUTPUT.PUT_LINE('Seat Allotted: ' || v_seatAlloted); -- Inform about the seat allotted
     END IF;
 
-    -- Step 4: Calculate distance and fare
+    -- Update the available seats in AvailabilitySchedule
+    UPDATE AvailabilitySchedule
+    SET AvailableSeats = v_availableSeats
+    WHERE TrainID = p_trainID
+      AND ScheduledDate = p_dateOfJourney;
+
+ELSIF v_availableSeats = 0 THEN
+    v_seatAlloted := 0; -- No seat available
+    DBMS_OUTPUT.PUT_LINE('Sorry for the inconvenience, all seats are full. Please try another train.'); 
+    RETURN; -- Exit procedure
+
+ELSIF v_availableSeats < 0 THEN
+    DBMS_OUTPUT.PUT_LINE('Error: All seats are booked. Please look for another train.'); 
+    RETURN; -- Exit procedure
+END IF;
+
+    -- Step 4: Calculate distance and fare  (FN)
     v_distance := calculate_distance(p_trainID, p_boardingStationID, p_endingStationID);
     v_fare := CalculateFare(p_trainID, p_boardingStationID, p_endingStationID);
 
@@ -327,48 +337,176 @@ END;
 
 
 
-
-
-
-
-
-
-
-
-SET SERVEROUTPUT ON; 
-
-DECLARE
-    v_email VARCHAR2(100) := 'Shubham26@example.com';
-    v_passkey VARCHAR2(100) := 'Shubham123';
-    v_boardingStationID VARCHAR2(5) := 'CNB';
-    v_endingStationID VARCHAR2(5) := 'NDLS';
-    v_dateOfJourney DATE := TO_DATE('2024-10-02', 'YYYY-MM-DD');
-    v_passengerFullName VARCHAR2(100) := 'Shubham Gupta';
-    v_gender CHAR := 'M';
-    v_age INTEGER := 25;
-    v_paymentStatus CHAR := '1'; -- Assuming '1' is for paid
-    v_trainID INTEGER := 13452;
-    v_transactionID VARCHAR2(70) := 'TXN12345';
 BEGIN
     CreateBooking(
-        p_email => v_email,
-        p_passkey => v_passkey,
-        p_boardingStationID => v_boardingStationID,
-        p_endingStationID => v_endingStationID,
-        p_dateOfJourney => v_dateOfJourney,
-        p_passengerFullName => v_passengerFullName,
-        p_gender => v_gender,
-        p_age => v_age,
-        p_paymentStatus => v_paymentStatus,
-        p_trainID => v_trainID,
-        p_transactionID => v_transactionID
+        p_email => 'Shubham26@example.com',
+        p_passkey => 'Shubham123',
+        p_boardingStationID => 'BSB',
+        p_endingStationID => 'NDLS',
+        p_dateOfJourney => TO_DATE('2024-10-02', 'YYYY-MM-DD'),
+        p_passengerFullName => 'John Doe',
+        p_gender => 'M',
+        p_age => 30,
+        p_paymentStatus => '1',
+        p_trainID => 13452,
+        p_transactionID => 'TXN123'
+    );
+END;
+
+
+SELECT * FROM AvailabilitySchedule
+WHERE TrainID = 13452 AND ScheduledDate = TO_DATE('02-OCT-2024', 'DD-MON-YYYY');
+
+
+
+SELECT * FROM CUSTOMERBOOKINGHISTORY;
+
+
+update   AvailabilitySchedule 
+set AvailableSeats = 15
+WHERE TrainID = 13452 AND ScheduledDate = TO_DATE('02-OCT-2024', 'DD-MON-YYYY');
+
+
+
+
+
+BEGIN
+    CreateBooking(
+        p_email => 'Shubham26@example.com',
+        p_passkey => 'Shubham123',
+        p_boardingStationID => 'BSB',
+        p_endingStationID => 'NDLS',
+        p_dateOfJourney => TO_DATE('2024-10-02', 'YYYY-MM-DD'),
+        p_passengerFullName => 'John Doe',
+        p_gender => 'M',
+        p_age => 30,
+        p_paymentStatus => '1',
+        p_trainID => 13452,
+        p_transactionID => 'TXN123'
     );
 END;
 
 
 
+
+SELECT * FROM CUSTOMERS
+
+
+
+
+
+
 COMMIT;
-SELECT * FROM BOOKINGS;
+
+
+
+
+
+
+
+-------------------------- 5. CancelBooking   PROC ------------------------------------------
+
+
+
+CREATE OR REPLACE PROCEDURE CancelBooking (
+    p_email IN VARCHAR2,
+    p_passkey IN VARCHAR2,
+    p_bookingID IN NUMBER
+) AS
+    v_customerID VARCHAR2(20);
+    v_fare DECIMAL(10, 3);
+    v_seatAlloted INT;
+    v_availableSeats INT;
+    v_cancellationAmount DECIMAL(10, 3);
+    v_refundAmount DECIMAL(10, 3);
+    v_transactionID VARCHAR2(70);
+    v_availabilityDate DATE;
+
+    -- Exception for non-existent booking
+    e_no_booking EXCEPTION;
+    PRAGMA EXCEPTION_INIT(e_no_booking, -20002);  -- Custom error code for no booking found
+
+BEGIN
+    -- Step 1: Validate Customer and fetch CustomerID
+    CustomerLogin(p_email, p_passkey, v_customerID);
+    
+    -- Step 2: Fetch details from Bookings table
+    SELECT Fare, SeatAlloted, TransactionID, DateOfJourney
+    INTO v_fare, v_seatAlloted, v_transactionID, v_availabilityDate
+    FROM Bookings
+    WHERE BookingID = p_bookingID;
+
+    -- Step 3: Update SeatAlloted and handle AvailabilitySchedule
+    IF v_seatAlloted = 0 THEN
+        -- If seat was confirmed, increment available seats
+        UPDATE AvailabilitySchedule
+        SET AvailableSeats = AvailableSeats + 1
+        WHERE TrainID = (SELECT TrainID FROM Bookings WHERE BookingID = p_bookingID)
+        AND ScheduledDate = v_availabilityDate;
+    END IF;
+
+    -- Update SeatAlloted to -1 (canceled)
+    UPDATE Bookings
+    SET SeatAlloted = -1
+    WHERE BookingID = p_bookingID;
+
+    -- Step 4: Calculate cancellation amount and refund amount
+    v_cancellationAmount := v_fare * 0.20;
+    v_refundAmount := v_fare - v_cancellationAmount;
+
+    -- Step 5: Insert into Cancelation table
+    INSERT INTO Cancelation (BookingID, CancellationDate, CancellationAmt, RefundAmt, TransactionID, TransferStatus)
+    VALUES (p_bookingID, SYSTIMESTAMP, v_cancellationAmount, v_refundAmount, v_transactionID, '1');
+
+    -- Commit the transaction
+    COMMIT;
+
+    DBMS_OUTPUT.PUT_LINE('Cancellation successful. Refund Amount: ' || v_refundAmount);
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        RAISE_APPLICATION_ERROR(-20002, 'No booking found for the given BookingID');
+    WHEN OTHERS THEN
+        RAISE_APPLICATION_ERROR(-20003, 'Error occurred: ' || SQLERRM);
+END;
+
+
+COMMIT;
+
+
+SELECT * FROM CUSTOMERS;
+
+
+
+DECLARE
+    v_email VARCHAR2(100) := 'Shubham26@example.com';  -- Customer's email
+    v_passkey VARCHAR2(100) := 'Shubham123';               -- Customer's password
+    v_bookingID NUMBER := 1;                         -- Booking ID to be canceled (replace with actual ID)
+BEGIN
+    -- Call the CancelBooking procedure
+    CancelBooking(v_email, v_passkey, v_bookingID);
+EXCEPTION
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Cancellation failed: ' || SQLERRM);
+END;
+/
+
+
+COMMIT;
+
+
+
+
+
+
+SELECT * FROM CUSTOMERBOOKINGHISTORY;
 
 SELECT * FROM AvailabilitySchedule
-WHERE  SCHEDULEDDATE = TO_DATE('2024-10-02', 'YYYY-MM-DD')  AND TRAINID = 13452 ;
+WHERE TrainID = 13452 AND ScheduledDate = TO_DATE('02-OCT-2024', 'DD-MON-YYYY');
+
+
+
+
+
+
+
+

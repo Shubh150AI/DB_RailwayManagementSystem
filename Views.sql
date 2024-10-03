@@ -1,76 +1,110 @@
 
 
-DROP VIEW TrainAvailability;
 
 
 
 
 
-CREATE OR REPLACE VIEW TrainAvailability AS
+-------------------------------VIEW  TrainAvailabilityDetails -------------------------
+
+
+
+CREATE OR REPLACE VIEW TrainAvailabilityDetails AS
 SELECT 
     t.TrainID,
     t.TrainName,
-    t.AvailableSeats,
     a.AvailableDays,
     a.ScheduledDate,
-    COALESCE((SELECT COUNT(b.BookingID)
-              FROM Bookings b
-              WHERE b.TrainID = t.TrainID 
-              AND b.DateOfJourney = a.ScheduledDate), 0) AS BookedSeats, 
-    rs.StartingStationID,
-    s1.StationCity AS StartingStationCity,
-    rs.EndingStationID,
-    s2.StationCity AS EndingStationCity,
-    r.RouteDescription AS TrainRoute 
+    a.RunningStatus,
+    a.AvailableSeats AS SeatsAvailable,
+    rt.RouteID,
+    rt.RouteDescription,
+    ts.RouteStationID,
+    ts.StartingStationID,
+    ts.IntermediateStationID,
+    ts.EndingStationID,
+    ts.DistanceCovered,
+    tt.ArrivalTime,
+    tt.DepartureTime
 FROM 
     Trains t
-INNER JOIN 
+JOIN 
     AvailabilitySchedule a ON t.TrainID = a.TrainID
-INNER JOIN 
-    RouteStations rs ON t.RouteID = rs.RouteID
-INNER JOIN 
-    Stations s1 ON rs.StartingStationID = s1.StationID
-INNER JOIN 
-    Stations s2 ON rs.EndingStationID = s2.StationID
-INNER JOIN 
-    Routes r ON t.RouteID = r.RouteID  -- Joining with Routes table
-LEFT JOIN 
-    Bookings b ON t.TrainID = b.TrainID AND a.ScheduledDate = b.DateOfJourney
-GROUP BY 
-    t.TrainID, t.TrainName, t.AvailableSeats, a.AvailableDays, a.ScheduledDate,
-    rs.StartingStationID, s1.StationCity, rs.EndingStationID, s2.StationCity,
-    r.RouteDescription;  -- Added RouteDescription to GROUP BY clause
+JOIN 
+    Routes rt ON t.RouteID = rt.RouteID
+JOIN 
+    RouteStations ts ON rt.RouteID = ts.RouteID
+JOIN 
+    TrainTiming tt ON t.TrainID = tt.TrainID AND ts.RouteStationID = tt.RouteStationID;
+
+
+
+
+
+--TESTING  TrainAvailabilityDetails  VIEW
+
+SELECT *
+FROM AvailabilitySchedule
+WHERE 
+    TrainID = 13452
+    AND ScheduledDate = TO_DATE('02-OCT-2024', 'DD-MON-YYYY');
 
 
 
 
 
 
-
-
-SELECT * 
-FROM TrainAvailability 
-WHERE ScheduledDate BETWEEN  TO_DATE('25/10/2024', 'DD/MM/YYYY')  AND  TO_DATE('29/10/2024', 'DD/MM/YYYY')
-AND StartingStationCity = 'Varanasi';
+--------------CustomerBookingHistory VIEW ----------------
 
 
 
 
+SELECT * FROM BOOKINGS;
 
 
 
--- BOOKING STATUS
-
-CREATE VIEW BookingStatus AS
+CREATE OR REPLACE VIEW CustomerBookingHistory AS (
 SELECT 
-    BOOKINGID AS PNRNUMBER, 
-    TRAINNAME, 
-    DATEOFJOURNEY, 
-    BOARDINGSTATIONID, 
-    ENDINGSTATIONID, 
+    b.BookingID,
+    b.DateOfJourney,
+    b.Fare,
+    b.BookingDate,
+    b.TrainID,
+    t.TrainName,
+    s1.StationCity AS BoardingCity,
+    s2.StationCity AS EndingCity,
+    b.CustomerID  ,
     CASE 
-        WHEN SeatAlloted = '1' THEN 'Confirmed' 
-        ELSE 'Waiting' 
+        WHEN b.SeatAlloted = 0 THEN 'Confirmed'
+        WHEN b.SeatAlloted = 5 THEN 'WL1'
+        WHEN b.SeatAlloted = 4 THEN 'WL2'
+        WHEN b.SeatAlloted = 3 THEN 'WL3'
+        WHEN b.SeatAlloted = 2 THEN 'WL4'
+        WHEN b.SeatAlloted = 1 THEN 'WL5'
+        ELSE 'Cancelled' 
     END AS BookingStatus
-FROM BOOKINGS;
+FROM Bookings b
+JOIN Trains t ON b.TrainID = t.TrainID
+JOIN Stations s1 ON b.BoardingStationID = s1.StationID
+JOIN Stations s2 ON b.EndingStationID = s2.StationID
+
+)
+
+
+SELECT * FROM CUSTOMERBOOKINGHISTORY 
+WHERE TrainID = 13452 AND ScheduledDate = TO_DATE('02-OCT-2024', 'DD-MON-YYYY');
+
+
+
+
+
+
+
+
+
+COMMIT;
+
+
+
+
 

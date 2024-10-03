@@ -143,471 +143,226 @@ SELECT * FROM RouteStations;
 SELECT * FROM  AvailabilitySchedule;
 
 
+
+
+
+
 -- Availability for Train ID 13452 (Varanasi-New Delhi SF)
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0210202413452, 13452, '13452WED', 'WED', TO_DATE('02-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0215202413452, 13452, 'WED', TO_DATE('02-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0710202413452, 13452, '13452MON', 'MON', TO_DATE('07-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0715202413452, 13452, 'MON', TO_DATE('07-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0910202413452, 13452, '13452WED', 'WED', TO_DATE('09-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0915202413452, 13452, 'WED', TO_DATE('09-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
 
 -- For Kashi Vishwanath EXP (TrainID: 21452)
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0110202421452, 21452, '21452TUE', 'TUE', TO_DATE('01-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0115202421452, 21452, 'TUE', TO_DATE('01-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0310202421452, 21452, '21452THU', 'THU', TO_DATE('03-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0315202421452, 21452, 'THU', TO_DATE('03-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0410202421452, 21452, '21452FRI', 'FRI', TO_DATE('04-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0415202421452, 21452, 'FRI', TO_DATE('04-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0510202421452, 21452, '21452SAT', 'SAT', TO_DATE('05-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0515202421452, 21452, 'SAT', TO_DATE('05-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0610202421452, 21452, '21452SUN', 'SUN', TO_DATE('06-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0615202421452, 21452, 'SUN', TO_DATE('06-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0710202421452, 21452, '21452TUE', 'TUE', TO_DATE('07-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0715202421452, 21452, 'TUE', TO_DATE('07-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0910202421452, 21452, '21452THU', 'THU', TO_DATE('09-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0915202421452, 21452, 'THU', TO_DATE('09-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (1010202421452, 21452, '21452FRI', 'FRI', TO_DATE('10-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (1515202421452, 21452, 'FRI', TO_DATE('15-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
 
 -- For VNS-NDLS Vande Bharat EXP (TrainID: 22462)
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0210202422462, 22462, '22462WED', 'WED', TO_DATE('02-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0215202422462, 22462, 'WED', TO_DATE('02-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0510202422462, 22462, '22462SAT', 'SAT', TO_DATE('05-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0515202422462, 22462, 'SAT', TO_DATE('05-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0910202422462, 22462, '22462WED', 'WED', TO_DATE('09-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0915202422462, 22462, 'WED', TO_DATE('09-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (1010202422462, 22462, '22462SAT', 'SAT', TO_DATE('10-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (1515202422462, 22462, 'SAT', TO_DATE('15-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
 
 -- For New Delhi-Varanasi SF (TrainID: 13453)
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0110202413453, 13453, '13453TUE', 'TUE', TO_DATE('01-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0115202413453, 13453, 'TUE', TO_DATE('01-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0310202413453, 13453, '13453THU', 'THU', TO_DATE('03-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0315202413453, 13453, 'THU', TO_DATE('03-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0810202413453, 13453, '13453TUE', 'TUE', TO_DATE('08-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0815202413453, 13453, 'TUE', TO_DATE('08-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (1010202413453, 13453, '13453THU', 'THU', TO_DATE('10-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (1515202413453, 13453, 'THU', TO_DATE('15-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
 
 -- For Kashi Vishwanath EXP (Return) (TrainID: 21453)
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0210202421453, 21453, '21453WED', 'WED', TO_DATE('02-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0215202421453, 21453, 'WED', TO_DATE('02-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0410202421453, 21453, '21453FRI', 'FRI', TO_DATE('04-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0415202421453, 21453, 'FRI', TO_DATE('04-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0510202421453, 21453, '21453SAT', 'SAT', TO_DATE('05-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0515202421453, 21453, 'SAT', TO_DATE('05-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0610202421453, 21453, '21453SUN', 'SUN', TO_DATE('06-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0615202421453, 21453, 'SUN', TO_DATE('06-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0710202421453, 21453, '21453MON', 'MON', TO_DATE('07-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0715202421453, 21453, 'MON', TO_DATE('07-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0910202421453, 21453, '21453WED', 'WED', TO_DATE('09-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0915202421453, 21453, 'WED', TO_DATE('09-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
 
 -- For Vande Bharat EXP (Return) (TrainID: 22463)
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0310202422463, 22463, '22463THU', 'THU', TO_DATE('03-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0315202422463, 22463, 'THU', TO_DATE('03-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (0610202422463, 22463, '22463SUN', 'SUN', TO_DATE('06-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (0615202422463, 22463, 'SUN', TO_DATE('06-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
 
-INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, TimingID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
-VALUES (1010202422463, 22463, '22463THU', 'THU', TO_DATE('10-OCT-2024', 'DD-MON-YYYY'), 'Y', 10);
+INSERT INTO AvailabilitySchedule (AvailabilityKey, TrainID, AvailableDays, ScheduledDate, RunningStatus, AvailableSeats) 
+VALUES (1515202422463, 22463, 'THU', TO_DATE('15-OCT-2024', 'DD-MON-YYYY'), 'Y', 15);
+
 
 
 
 SELECT * FROM  AvailabilitySchedule;
 
 
-
+COMMIT;
 
 ---     TrainTiming table
 
 
 
 
---  13452WED
 
+--  13452
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13452WED', 4521, TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS'));
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13452WED', 4522, TO_TIMESTAMP('2024-10-02 10:05:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 10:15:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('13452', 4521, TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS'));
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13452WED', 4523, TO_TIMESTAMP('2024-10-02 12:45:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 12:55:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('13452', 4522, TO_TIMESTAMP('2024-10-02 10:05:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 10:15:00', 'YYYY-MM-DD HH24:MI:SS'));
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13452WED', 4524, TO_TIMESTAMP('2024-10-02 21:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 21:10:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('13452', 4523, TO_TIMESTAMP('2024-10-02 12:45:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 12:55:00', 'YYYY-MM-DD HH24:MI:SS'));
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13452WED', 4525, TO_TIMESTAMP('2024-10-02 22:10:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 22:10:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('13452', 4524, TO_TIMESTAMP('2024-10-02 21:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 21:10:00', 'YYYY-MM-DD HH24:MI:SS'));
 
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('13452', 4525, TO_TIMESTAMP('2024-10-02 22:10:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 22:10:00', 'YYYY-MM-DD HH24:MI:SS'));
 
 
 
--- 13452MON 
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13452MON', 4521, TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13452MON', 4522, TO_TIMESTAMP('2024-10-02 10:05:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 10:15:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
+--SELECT * FROM  TrainTiming  WHERE  TrainID = '13452';
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13452MON', 4523, TO_TIMESTAMP('2024-10-02 12:45:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 12:55:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13452MON', 4524, TO_TIMESTAMP('2024-10-02 21:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 21:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- GZB
+-- Insert timings for Train ID '21452'
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13452MON', 4525, TO_TIMESTAMP('2024-10-02 22:10:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 22:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
 
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('21452', 4521, TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
 
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('21452', 4522, TO_TIMESTAMP('2024-10-02 10:05:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 10:15:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
 
-SELECT * FROM  TrainTiming  WHERE  TimingID = '13452MON';
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('21452', 4523, TO_TIMESTAMP('2024-10-02 12:45:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 12:55:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
 
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('21452', 4524, TO_TIMESTAMP('2024-10-02 21:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 21:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- GZB
 
--- Insert timings for Train ID '21452TUE'TUE
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('21452', 4525, TO_TIMESTAMP('2024-10-02 22:10:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 22:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
 
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452TUE', 4521, TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452TUE', 4522, TO_TIMESTAMP('2024-10-02 10:05:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 10:15:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452TUE', 4523, TO_TIMESTAMP('2024-10-02 12:45:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 12:55:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452TUE', 4524, TO_TIMESTAMP('2024-10-02 21:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 21:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- GZB
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452TUE', 4525, TO_TIMESTAMP('2024-10-02 22:10:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 22:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
 
+-- Insert timings for Train ID '22462'
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('22462', 4621, TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
 
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('22462', 4622, TO_TIMESTAMP('2024-10-02 10:05:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 10:15:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
 
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('22462', 4623, TO_TIMESTAMP('2024-10-02 14:55:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 15:05:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
 
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('22462', 4624, TO_TIMESTAMP('2024-10-03 01:18:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-03 01:18:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
 
--- Insert timings for Train ID '21452THU'THU
 
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452THU', 4521, TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452THU', 4522, TO_TIMESTAMP('2024-10-02 10:05:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 10:15:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452THU', 4523, TO_TIMESTAMP('2024-10-02 12:45:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 12:55:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
+-- Insert timings for Train ID '21453'
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('21453', 4531, TO_TIMESTAMP('2024-10-06 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-06 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452THU', 4524, TO_TIMESTAMP('2024-10-02 21:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 21:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- GZB
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('21453', 4532, TO_TIMESTAMP('2024-10-06 09:10:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-06 09:20:00', 'YYYY-MM-DD HH24:MI:SS')); -- GZB
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452THU', 4525, TO_TIMESTAMP('2024-10-02 22:10:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 22:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('21453', 4533, TO_TIMESTAMP('2024-10-06 15:45:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-06 15:55:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
 
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('21453', 4534, TO_TIMESTAMP('2024-10-07 01:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-07 01:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
 
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('21453', 4535, TO_TIMESTAMP('2024-10-07 02:25:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-07 02:25:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
 
---DELETE  FROM  TrainTiming  WHERE  TimingID = '21452THU';
 
-SELECT *   FROM  TrainTiming  WHERE  TimingID = '21452THU';
+--SELECT *   FROM  TrainTiming  WHERE  TrainID = '22463';
 
 
+-- Insert timings for Train ID 22463
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('22463', 4631, TO_TIMESTAMP('2024-10-06 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-06 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
 
--- Insert timings for Train ID '21452FRI'FRI
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452FRI', 4521, TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('22463', 4632, TO_TIMESTAMP('2024-10-06 13:25:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-06 13:35:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452FRI', 4522, TO_TIMESTAMP('2024-10-02 10:05:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 10:15:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('22463', 4633, TO_TIMESTAMP('2024-10-07 01:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-07 01:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452FRI', 4523, TO_TIMESTAMP('2024-10-02 12:45:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 12:55:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
+INSERT INTO TrainTiming (TrainID, RouteStationID, ArrivalTime, DepartureTime) 
+VALUES ('22463', 4634, TO_TIMESTAMP('2024-10-07 01:50:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-07 01:50:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452FRI', 4524, TO_TIMESTAMP('2024-10-02 21:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 21:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- GZB
 
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452FRI', 4525, TO_TIMESTAMP('2024-10-02 22:10:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 22:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
-
-SELECT *   FROM  TrainTiming  WHERE  TimingID = '21452FRI';
-
-
-
-
--- Insert timings for Train ID '21452SAT'SAT
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452SAT', 4521, TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452SAT', 4522, TO_TIMESTAMP('2024-10-02 10:05:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 10:15:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452SAT', 4523, TO_TIMESTAMP('2024-10-02 12:45:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 12:55:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452SAT', 4524, TO_TIMESTAMP('2024-10-02 21:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 21:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- GZB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452SAT', 4525, TO_TIMESTAMP('2024-10-02 22:10:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 22:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
-
-
-
-
--- Insert timings for Train ID '21452SUN'SUN
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452SUN', 4521, TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452SUN', 4522, TO_TIMESTAMP('2024-10-02 10:05:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 10:15:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452SUN', 4523, TO_TIMESTAMP('2024-10-02 12:45:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 12:55:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452SUN', 4524, TO_TIMESTAMP('2024-10-02 21:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 21:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- GZB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21452SUN', 4525, TO_TIMESTAMP('2024-10-02 22:10:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 22:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
-
-
-
-
-
-
--- Insert timings for Train ID '22462WED'WED
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('22462WED', 4621, TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('22462WED', 4622, TO_TIMESTAMP('2024-10-02 10:05:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 10:15:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('22462WED', 4623, TO_TIMESTAMP('2024-10-02 14:55:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 15:05:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('22462WED', 4624, TO_TIMESTAMP('2024-10-03 01:18:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-03 01:18:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
-
-
-
-
--- Insert timings for Train ID '22462WED'SAT
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('22462SAT', 4621, TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('22462SAT', 4622, TO_TIMESTAMP('2024-10-02 10:05:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 10:15:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('22462SAT', 4623, TO_TIMESTAMP('2024-10-02 14:55:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 15:05:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('22462SAT', 4624, TO_TIMESTAMP('2024-10-03 01:18:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-03 01:18:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
-
-
-
-
-
-
-
--- Insert timings for Train ID '13453TUE'TUE
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13453TUE', 4531, TO_TIMESTAMP('2024-10-01 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-01 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13453TUE', 4532, TO_TIMESTAMP('2024-10-01 09:10:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-01 09:20:00', 'YYYY-MM-DD HH24:MI:SS')); -- GZB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13453TUE', 4533, TO_TIMESTAMP('2024-10-01 15:45:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-01 15:55:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13453TUE', 4534, TO_TIMESTAMP('2024-10-02 01:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 01:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13453TUE', 4535, TO_TIMESTAMP('2024-10-02 02:25:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 02:25:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
-
-
-
--- Insert timings for Train ID '13453THU'THU
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13453THU', 4531, TO_TIMESTAMP('2024-10-03 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-03 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13453THU', 4532, TO_TIMESTAMP('2024-10-03 09:10:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-03 09:20:00', 'YYYY-MM-DD HH24:MI:SS')); -- GZB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13453THU', 4533, TO_TIMESTAMP('2024-10-03 15:45:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-03 15:55:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13453THU', 4534, TO_TIMESTAMP('2024-10-04 01:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-04 01:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('13453THU', 4535, TO_TIMESTAMP('2024-10-04 02:25:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-04 02:25:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
-
-
-SELECT *   FROM  TrainTiming  WHERE  TimingID = '13453THU';
-
---Insert timings for Train ID '21453WED'WED
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453WED', 4531, TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453WED', 4532, TO_TIMESTAMP('2024-10-02 09:10:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 09:20:00', 'YYYY-MM-DD HH24:MI:SS')); -- GZB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453WED', 4533, TO_TIMESTAMP('2024-10-02 15:45:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-02 15:55:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453WED', 4534, TO_TIMESTAMP('2024-10-03 01:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-03 01:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453WED', 4535, TO_TIMESTAMP('2024-10-03 02:25:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-03 02:25:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
-
-
-
-
--- Insert timings for Train ID '21453FRI'FRI
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453FRI', 4531, TO_TIMESTAMP('2024-10-03 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-03 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453FRI', 4532, TO_TIMESTAMP('2024-10-03 09:10:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-03 09:20:00', 'YYYY-MM-DD HH24:MI:SS')); -- GZB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453FRI', 4533, TO_TIMESTAMP('2024-10-03 15:45:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-03 15:55:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453FRI', 4534, TO_TIMESTAMP('2024-10-04 01:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-04 01:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453FRI', 4535, TO_TIMESTAMP('2024-10-04 02:25:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-04 02:25:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
-
-SELECT *   FROM  TrainTiming  WHERE  TimingID = '21453FRI';
-
-
--- Insert timings for Train ID '21453SAT'SAT
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453SAT', 4531, TO_TIMESTAMP('2024-10-04 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-04 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453SAT', 4532, TO_TIMESTAMP('2024-10-04 09:10:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-04 09:20:00', 'YYYY-MM-DD HH24:MI:SS')); -- GZB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453SAT', 4533, TO_TIMESTAMP('2024-10-04 15:45:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-04 15:55:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453SAT', 4534, TO_TIMESTAMP('2024-10-05 01:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-05 01:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453SAT', 4535, TO_TIMESTAMP('2024-10-05 02:25:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-05 02:25:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
-
-
-
--- Insert timings for Train ID '21453SUN'SUN
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453SUN', 4531, TO_TIMESTAMP('2024-10-05 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-05 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453SUN', 4532, TO_TIMESTAMP('2024-10-05 09:10:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-05 09:20:00', 'YYYY-MM-DD HH24:MI:SS')); -- GZB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453SUN', 4533, TO_TIMESTAMP('2024-10-05 15:45:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-05 15:55:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453SUN', 4534, TO_TIMESTAMP('2024-10-06 01:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-06 01:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453SUN', 4535, TO_TIMESTAMP('2024-10-06 02:25:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-06 02:25:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
-
-
-SELECT *   FROM  TrainTiming  WHERE  TimingID = '21453SUN';
-
-
--- Insert timings for Train ID '21453MON'MON
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453MON', 4531, TO_TIMESTAMP('2024-10-06 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-06 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453MON', 4532, TO_TIMESTAMP('2024-10-06 09:10:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-06 09:20:00', 'YYYY-MM-DD HH24:MI:SS')); -- GZB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453MON', 4533, TO_TIMESTAMP('2024-10-06 15:45:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-06 15:55:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453MON', 4534, TO_TIMESTAMP('2024-10-07 01:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-07 01:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('21453MON', 4535, TO_TIMESTAMP('2024-10-07 02:25:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-07 02:25:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
-
-
-SELECT *   FROM  TrainTiming  WHERE  TimingID = '22463SUN';
-
-
--- Insert timings for Train ID 22463THU
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('22463THU', 4631, TO_TIMESTAMP('2024-10-03 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-03 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('22463THU', 4632, TO_TIMESTAMP('2024-10-03 13:25:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-03 13:35:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('22463THU', 4633, TO_TIMESTAMP('2024-10-04 01:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-04 01:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('22463THU', 4634, TO_TIMESTAMP('2024-10-04 01:50:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-04 01:50:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
-
-
-
-
-
-
-
--- Insert timings for Train ID 22463SUN
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('22463SUN', 4631, TO_TIMESTAMP('2024-10-06 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-06 08:00:00', 'YYYY-MM-DD HH24:MI:SS')); -- NDLS
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('22463SUN', 4632, TO_TIMESTAMP('2024-10-06 13:25:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-06 13:35:00', 'YYYY-MM-DD HH24:MI:SS')); -- CNB
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('22463SUN', 4633, TO_TIMESTAMP('2024-10-07 01:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-07 01:10:00', 'YYYY-MM-DD HH24:MI:SS')); -- PRJ
-
-INSERT INTO TrainTiming (TimingID, RouteStationID, ArrivalTime, DepartureTime) 
-VALUES ('22463SUN', 4634, TO_TIMESTAMP('2024-10-07 01:50:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-07 01:50:00', 'YYYY-MM-DD HH24:MI:SS')); -- BSB
-
+SELECT * FROM  TrainTiming
 
 
 
@@ -619,24 +374,8 @@ COMMIT;
 
 
 
-INSERT INTO AvailibilityTimingBridge (TimingID) VALUES ('13452WED');
-INSERT INTO AvailibilityTimingBridge (TimingID) VALUES ('13452MON');
-INSERT INTO AvailibilityTimingBridge (TimingID) VALUES ('21452TUE');
-INSERT INTO AvailibilityTimingBridge (TimingID) VALUES ('21452THU');
-INSERT INTO AvailibilityTimingBridge (TimingID) VALUES ('21452FRI');
-INSERT INTO AvailibilityTimingBridge (TimingID) VALUES ('21452SAT');
-INSERT INTO AvailibilityTimingBridge (TimingID) VALUES ('21452SUN');
-INSERT INTO AvailibilityTimingBridge (TimingID) VALUES ('22462WED');
-INSERT INTO AvailibilityTimingBridge (TimingID) VALUES ('22462SAT');
-INSERT INTO AvailibilityTimingBridge (TimingID) VALUES ('13453TUE');
-INSERT INTO AvailibilityTimingBridge (TimingID) VALUES ('13453THU');
-INSERT INTO AvailibilityTimingBridge (TimingID) VALUES ('21453WED');
-INSERT INTO AvailibilityTimingBridge (TimingID) VALUES ('21453FRI');
-INSERT INTO AvailibilityTimingBridge (TimingID) VALUES ('21453SAT');
-INSERT INTO AvailibilityTimingBridge (TimingID) VALUES ('21453SUN');
-INSERT INTO AvailibilityTimingBridge (TimingID) VALUES ('21453MON');
-INSERT INTO AvailibilityTimingBridge (TimingID) VALUES ('22463THU');
-INSERT INTO AvailibilityTimingBridge (TimingID) VALUES ('22463SUN');
+
+
 
 
 
