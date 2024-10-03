@@ -16,6 +16,7 @@ This Railway Booking System is designed to manage train schedules, routes, stati
 8. **Distance Calculation**: The distance between two stations depends on the route and is calculated accordingly.
 9. **Mandatory Customer Registration**: Customer registration is mandatory to book a seat successfully.
 10. **Multiple Ticket Booking**: Customers can book multiple tickets using the same CustomerID and can cancel them at any time before the train's departure.
+11. **WaitingPolicy** : If any ticket is cancelled and seat is available the ticket will be alotted to the earlier Waiting list PNR.
 
 ## Database Schema
 
