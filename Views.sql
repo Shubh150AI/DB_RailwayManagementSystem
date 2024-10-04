@@ -28,23 +28,21 @@ SELECT
     tt.DepartureTime
 FROM 
     Trains t
-JOIN 
+INNER JOIN 
     AvailabilitySchedule a ON t.TrainID = a.TrainID
-JOIN 
+INNER JOIN 
     Routes rt ON t.RouteID = rt.RouteID
-JOIN 
+INNER JOIN 
     RouteStations ts ON rt.RouteID = ts.RouteID
-JOIN 
+INNER JOIN 
     TrainTiming tt ON t.TrainID = tt.TrainID AND ts.RouteStationID = tt.RouteStationID;
-
-
 
 
 
 --TESTING  TrainAvailabilityDetails  VIEW
 
 SELECT *
-FROM AvailabilitySchedule
+FROM TrainAvailabilityDetails
 WHERE 
     TrainID = 13452
     AND ScheduledDate = TO_DATE('02-OCT-2024', 'DD-MON-YYYY');
@@ -84,15 +82,16 @@ SELECT
         ELSE 'Cancelled' 
     END AS BookingStatus
 FROM Bookings b
-JOIN Trains t ON b.TrainID = t.TrainID
-JOIN Stations s1 ON b.BoardingStationID = s1.StationID
-JOIN Stations s2 ON b.EndingStationID = s2.StationID
+INNER JOIN Trains t ON b.TrainID = t.TrainID
+INNER JOIN Stations s1 ON b.BoardingStationID = s1.StationID
+INNER JOIN Stations s2 ON b.EndingStationID = s2.StationID
 
 )
 
 
+
 SELECT * FROM CUSTOMERBOOKINGHISTORY 
-WHERE TrainID = 13452 AND ScheduledDate = TO_DATE('02-OCT-2024', 'DD-MON-YYYY');
+WHERE BookingID  = 4  AND CustomerID = 'C000009';
 
 
 
